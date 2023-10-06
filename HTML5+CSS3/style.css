@@ -1,0 +1,78 @@
+/* 
+margin: espaçamento entre os elementos - margem.
+border: as bordas, circundam o padding e conteudo, e da para mudar a aparencia como largura e cor
+padding: espaçamento entre borda e conteudo. a diferença para as margens é que declarações de imagem de fundo funcionam nele;
+content: conteudo, texto, imagem, video
+*/
+/*
+ID: é representado pelo símbolo # (hash) seguido de um nome para esse ID.
+Classe: a classe é representada de forma parecida do ID, mas é precedida por um ponto em vez do hash.
+E a diferença mais importante entre eles é a forma como devem ser usados: o ID só pode ser usado uma vez em uma página HTML enquanto a classe não tem restrições.
+*/
+
+body {
+    background: white;
+    max-width: 900px;
+    margin: auto;
+}
+
+#title,
+.subtitle,
+.post_title {
+    font-family: Verdana, Arial;
+    color: rgba(209, 69, 4, 0.76);
+}
+
+#title {
+    font-family: Verdana;
+    font-size: 25px;
+    text-transform: uppercase;
+    /*font-weight:bold -> peso da fonte, no exemplo deixa em negrito*/
+    /*text-transform -> uppercase, lowercase ou capitalize(camelcase)*/
+}
+
+/*mudar a cor dos links:*/
+a {
+    text-decoration: line-through;
+    color: rgba(209, 69, 4, 0.76)
+}
+
+/*
+largura: pixels, centimetros, milimetros
+cor: ingles, #hexadecimal
+estilo: solida/solid, pontiladas/dotted, tracejada/dashed
+*/
+
+.img_header {
+    border: 1px solid rgba(209, 69, 4, 0.76);
+    border-radius: 50px;
+}
+
+.post_title {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+/*
+propriedade padding ou border:
+primeiro valor-> eixo y - superior e inferior
+segundo valor-> eixo x - direta e esquerda
+com 4 valores-> topo, direita, inferior, esquerda
+ou
+padding-top, padding-right, padding-bottom, padding-left
+*/
+
+.post {
+    background: rgb(228, 220, 220);
+    padding: 15px;
+    border: 3px solid gray;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.post_content {
+    margin: 0;
+    margin-bottom: 15px;
+}
