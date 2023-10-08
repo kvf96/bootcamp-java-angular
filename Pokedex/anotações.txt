@@ -1,0 +1,42 @@
+http-server:
+instalar node e npm install -g http-server
+cria um servidro http local simples
+dentro da pasta do projeto, executar http-server.cmd .\ para iniciar um servidor http e acessar o IP.
+
+Normalize:
+um css que padroniza o estilo da página em qualquer dispositivo
+https://necolas.github.io/normalize.css/ 
+ou npm install normalize.css 
+ou https://cdnjs.com/libraries/normalize
+
+Media query:
+conjunto de css que é aplicado de acordo com o tamanho da tela
+https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+Requisição http:
+URL: https://pokeapi.co/api/v2/pokemon/
+URL é composta de ${IP}/${path = path caminho de identificaçao do recurso}
+IP: o DNS resolve o ip e transforma em nome http://127.0.0.1:8080 > https://pokeapi.co
+
+Query String:
+URL: https://pokeapi.co/api/v2/pokemon/?type=grass&name=i
+tudo após o ponto de interrogação é uma query de busca por chave e valor, separados por &
+
+Paginação da busca:
+URL: https://pokeapi.co/api/v2/pokemon/?limit=20&offset=20
+limit=20 página
+offset=20 quantidade de itens exibidos
+
+https://httpstatusdogs.com/
+https://dribbble.com/shots/6540871-Pokedex-App/attachments/6540871-Pokedex-App?mode=media
+
+Requisição HTTP no JavaScript -> Fetch API
+
+    //fetch tem processamento assincrono, é executado e nao tem resposta de imediato
+    //prmomise é uma "promessa" de resposta
+    //a function só será executada quando o fetch receber uma resposta
