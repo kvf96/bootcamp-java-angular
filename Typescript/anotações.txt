@@ -1,0 +1,53 @@
+https://cssgenerator.org/box-shadow-css-generator.html
+https://caniuse.com/
+https://www.typescriptlang.org/
+extensões:
+tldraw
+dracula 
+liveserver
+
+typescript -> javascript:
+- tipagem , classes, interface e enums
+- erro em tempo de desenvolvimento, ou seja, não aguarda o codigo ser executado para mostrar o erro.
+
+npm install -g typescript
+
+executar javascript:
+node src/index.ts (pasta e arquivo)
+
+executar typescript:
+npx tsc  src/index.ts -> para traduzir typescript para javascript
+npx tsc -> se tiver feito a configuração tsconfig
+
+configuração tsconfig:
+npx tsc --init
+o arquivo tsconfig.json será criado e para executar typescript, usar comando npx tsc
+modificar a linha para build, onde será gerado o .js do .ts:  "outDir": "./Typescript/build"
+modificar pasta de entrada: "rootDir": "./TypeScript"
+tirar comentarios:  "removeComments": true, 
+
+
+deixar os comandos em uma só linha:
+adicionar no package.json o comando:
+"scripts": {
+  "start": "npx tsc && node build/index.js",
+  "test": "echo \"Error: no test specified\" && exit 1",
+}
+e depois executar o comando npm run start
+caso nao exista o arquivo package.json, executar npm init 
+
+servidor local que entende/executa typescript sem criar o build:
+npm i ts-node-dev
+adiciona no scripts start:dev
+  "scripts": {
+    "start": "npx tsc && node build/index.js",
+    "start:dev": "ts-node-dev --respawn --transpile-only index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+executa npm run start:dev
+
+
+decorators:
+decorar funções para ser disparada
+no tsconfig, descomentar "experimentalDecorators": true
+e colocar a seguinte sintaxe antes da classe a ser decorada: @nomedafunção
